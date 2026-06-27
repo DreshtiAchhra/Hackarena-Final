@@ -50,7 +50,7 @@ export const JourneyCard: React.FC<JourneyCardProps> = ({
       className={`p-5 rounded-2xl bg-card border transition-all duration-300 select-none cursor-pointer flex flex-col justify-between relative overflow-hidden group ${
         isActive 
           ? 'ring-2 ring-accent border-transparent shadow-accent-glow' 
-          : `border-slate-800 ${statusStyle.border}`
+          : statusStyle.border
       }`}
     >
       {/* Background Soft Gradients */}
@@ -61,19 +61,18 @@ export const JourneyCard: React.FC<JourneyCardProps> = ({
       {/* Header */}
       <div className="space-y-1.5 z-10">
         <div className="flex justify-between items-center">
-          <span className="text-xs font-semibold text-slate-400 flex items-center">
-            <LinkIcon className="w-3 h-3 mr-1 text-slate-500" />
-            {step.path}
+          <span className="text-[10px] font-mono font-bold text-accent bg-accent/10 px-2 py-0.5 rounded flex items-center">
+            {step.path.replace(/\//g, '') || 'Home'}
           </span>
           <span className={`text-[10px] uppercase font-extrabold px-2 py-0.5 rounded-full ${statusStyle.bg} ${statusStyle.text}`}>
             {statusStyle.label}
           </span>
         </div>
-        <h4 className="text-lg font-bold text-white group-hover:text-accent transition-colors duration-200">{step.name}</h4>
+        <h4 className="text-lg font-bold text-accent transition-colors duration-200">{step.name}</h4>
       </div>
 
       {/* Issues Breakdown & Score Row */}
-      <div className="mt-6 flex items-center justify-between border-t border-slate-800/60 pt-4 z-10">
+      <div className="mt-6 flex items-center justify-between border-t border-slate-200 pt-4 z-10">
         <div className="flex space-x-3.5">
           <div className="text-center">
             <span className="text-xs text-slate-500 block">Critical</span>
@@ -85,19 +84,20 @@ export const JourneyCard: React.FC<JourneyCardProps> = ({
           </div>
           <div className="text-center">
             <span className="text-xs text-slate-500 block">Info</span>
-            <span className="text-sm font-semibold text-slate-400 mt-0.5 block">{step.issuesCount.info}</span>
+            <span className="text-sm font-semibold text-slate-600 mt-0.5 block">{step.issuesCount.info}</span>
           </div>
         </div>
 
-        {/* Circular Metric Visual */}
-        <div className="flex items-center space-x-2">
-          <div className="text-right">
-            <span className="text-[10px] text-slate-500 block uppercase font-bold">UX Score</span>
-            <span className={`text-xl font-black ${
-              step.score >= 90 ? 'text-success' : step.score >= 70 ? 'text-warning' : 'text-danger'
-            }`}>{step.score}</span>
-          </div>
-          <div className="w-8 h-8 rounded-full border-2 border-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-300">
+        {/* Aligned Circular Metric Visual */}
+        <div className="flex flex-col items-center justify-center shrink-0">
+          <span className="text-[9px] text-slate-500 uppercase font-extrabold tracking-wider mb-1 block">UX Score</span>
+          <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-xs font-black shadow-sm shrink-0 ${
+            step.score >= 90 
+              ? 'border-success/30 bg-success/5 text-success' 
+              : step.score >= 70 
+              ? 'border-warning/30 bg-warning/5 text-warning' 
+              : 'border-danger/30 bg-danger/5 text-danger'
+          }`}>
             {step.score}%
           </div>
         </div>

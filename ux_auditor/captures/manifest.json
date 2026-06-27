@@ -1,11 +1,11 @@
 {
-  "total_pages": 1,
-  "successful": 1,
+  "total_pages": 6,
+  "successful": 6,
   "failed": 0,
   "output_dir": "C:\\Users\\Saniya\\OneDrive\\Desktop\\college_work\\HackarenaFinal\\ux_auditor\\captures",
   "captures": [
     {
-      "url": "https://www.python.org",
+      "url": "https://www.python.org/",
       "status": "ok",
       "error": null,
       "html_path": "captures\\www.python.org__root\\rendered.html",
@@ -13,9 +13,74 @@
       "css_path": "captures\\www.python.org__root\\styles.css",
       "metadata_path": "captures\\www.python.org__root\\metadata.json",
       "title": "Welcome to Python.org",
-      "load_time_ms": 20036,
+      "load_time_ms": 20029,
       "final_url": "https://www.python.org/",
-      "page_height_px": 2521
+      "page_height_px": 2788
+    },
+    {
+      "url": "https://www.python.org/psf",
+      "status": "ok",
+      "error": null,
+      "html_path": "captures\\www.python.org__psf\\rendered.html",
+      "screenshot_path": "captures\\www.python.org__psf\\screenshot.png",
+      "css_path": "captures\\www.python.org__psf\\styles.css",
+      "metadata_path": "captures\\www.python.org__psf\\metadata.json",
+      "title": "Python Software Foundation",
+      "load_time_ms": 10988,
+      "final_url": "https://www.python.org/psf-landing/",
+      "page_height_px": 2095
+    },
+    {
+      "url": "https://www.python.org/jobs",
+      "status": "ok",
+      "error": null,
+      "html_path": "captures\\www.python.org__jobs\\rendered.html",
+      "screenshot_path": "captures\\www.python.org__jobs\\screenshot.png",
+      "css_path": "captures\\www.python.org__jobs\\styles.css",
+      "metadata_path": "captures\\www.python.org__jobs\\metadata.json",
+      "title": "Python Job Board | Python.org",
+      "load_time_ms": 12537,
+      "final_url": "https://www.python.org/jobs/",
+      "page_height_px": 5102
+    },
+    {
+      "url": "https://www.python.org/community",
+      "status": "ok",
+      "error": null,
+      "html_path": "captures\\www.python.org__community\\rendered.html",
+      "screenshot_path": "captures\\www.python.org__community\\screenshot.png",
+      "css_path": "captures\\www.python.org__community\\styles.css",
+      "metadata_path": "captures\\www.python.org__community\\metadata.json",
+      "title": "Our Community | Python.org",
+      "load_time_ms": 1230,
+      "final_url": "https://www.python.org/community/",
+      "page_height_px": 1968
+    },
+    {
+      "url": "https://www.python.org/community/irc",
+      "status": "ok",
+      "error": null,
+      "html_path": "captures\\www.python.org__community__irc\\rendered.html",
+      "screenshot_path": "captures\\www.python.org__community__irc\\screenshot.png",
+      "css_path": "captures\\www.python.org__community__irc\\styles.css",
+      "metadata_path": "captures\\www.python.org__community__irc\\metadata.json",
+      "title": "Internet Relay Chat | Python.org",
+      "load_time_ms": 1190,
+      "final_url": "https://www.python.org/community/irc/",
+      "page_height_px": 1901
+    },
+    {
+      "url": "https://www.python.org/about",
+      "status": "ok",
+      "error": null,
+      "html_path": "captures\\www.python.org__about\\rendered.html",
+      "screenshot_path": "captures\\www.python.org__about\\screenshot.png",
+      "css_path": "captures\\www.python.org__about\\styles.css",
+      "metadata_path": "captures\\www.python.org__about\\metadata.json",
+      "title": "About Python\u2122 | Python.org",
+      "load_time_ms": 1217,
+      "final_url": "https://www.python.org/about/",
+      "page_height_px": 2506
     }
   ]
 }

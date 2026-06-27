@@ -23,6 +23,10 @@ import logging
 import sys
 from pathlib import Path
 
+# Configure Windows asyncio event loop policy for subprocess support in Playwright
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -50,9 +54,15 @@ app.add_middleware(
 )
 
 # ── Register module routers ────────────────────────────────────────────
+from fastapi.staticfiles import StaticFiles
 from modules.discovery.router import router as discovery_router  # noqa: E402
+from modules.browser_agent.router import router as browser_router  # noqa: E402
 
 app.include_router(discovery_router)
+app.include_router(browser_router)
+
+# Serve captures statically
+app.mount("/captures", StaticFiles(directory="captures"), name="captures")
 
 
 @app.get("/health", tags=["meta"])

@@ -18,3 +18,23 @@ ux_auditor/
     └── browser_agent/
         ├── __init__.py        ← this file
         └── agent.py           ← this file
+
+
+
+
+        modules/wcag_engine/
+├── __init__.py          → exports WCAGEngine
+├── engine.py            → orchestrator (async context manager, audit() method)
+├── router.py            → FastAPI POST /api/v1/wcag-audit
+└── rules/
+    ├── __init__.py      → ALL_RULES list, instantiated and ready
+    ├── base.py          → BaseRule ABC with _selector() helper
+    ├── images.py        → WCAG_1_1_1 (missing/redundant/filename alt)
+    ├── forms.py         → WCAG_1_3_1 (missing labels, placeholder-only, fieldsets)
+    ├── headings.py      → WCAG_1_3_2 + WCAG_2_4_6 (heading skips, H1, landmarks)
+    ├── color.py         → WCAG_1_4_3 (inline + CSS contrast ratio < 4.5:1)
+    ├── links.py         → WCAG_2_4_4 (vague text, no name, new-tab warnings)
+    └── keyboard.py      → WCAG_4_1_2 (no role, no tabindex, skip nav, aria-hidden)
+
+utils/models.py          → all 4 Pydantic models + WCAGSeverity enum
+test_wcag_rules.py       → standalone smoke test (no manifest needed)

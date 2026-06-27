@@ -150,12 +150,12 @@ export const LandingPage: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="flex items-center justify-center space-x-4 text-xs text-slate-500 font-mono"
+            className="flex items-center justify-center space-x-4 text-xs text-slate-600 font-mono"
           >
             <span>Popular:</span>
-            <button onClick={() => setUrl('shoppycart.io')} type="button" className="hover:text-accent transition-colors underline">shoppycart.io</button>
+            <button onClick={() => setUrl('shoppycart.io')} type="button" className="text-indigo-900 font-semibold hover:text-accent transition-colors underline cursor-pointer">shoppycart.io</button>
             <span>•</span>
-            <button onClick={() => setUrl('blog.travelworld.net')} type="button" className="hover:text-accent transition-colors underline">travelworld.net</button>
+            <button onClick={() => setUrl('blog.travelworld.net')} type="button" className="text-indigo-900 font-semibold hover:text-accent transition-colors underline cursor-pointer">travelworld.net</button>
           </motion.div>
         </div>
 
