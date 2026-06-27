@@ -1,0 +1,21 @@
+{
+  "total_pages": 1,
+  "successful": 1,
+  "failed": 0,
+  "output_dir": "C:\\Users\\Saniya\\OneDrive\\Desktop\\college_work\\HackarenaFinal\\ux_auditor\\captures",
+  "captures": [
+    {
+      "url": "https://www.python.org",
+      "status": "ok",
+      "error": null,
+      "html_path": "captures\\www.python.org__root\\rendered.html",
+      "screenshot_path": "captures\\www.python.org__root\\screenshot.png",
+      "css_path": "captures\\www.python.org__root\\styles.css",
+      "metadata_path": "captures\\www.python.org__root\\metadata.json",
+      "title": "Welcome to Python.org",
+      "load_time_ms": 20036,
+      "final_url": "https://www.python.org/",
+      "page_height_px": 2521
+    }
+  ]
+}

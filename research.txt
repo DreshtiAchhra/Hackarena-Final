@@ -1,0 +1,20 @@
+ux_auditor/
+├── main.py
+├── config/
+│   ├── __init__.py
+│   └── settings.py
+├── utils/
+│   ├── __init__.py
+│   ├── models.py
+│   └── url_utils.py
+└── modules/
+    ├── __init__.py
+    ├── discovery/
+    │   ├── __init__.py
+    │   ├── service.py
+    │   ├── sitemap_parser.py
+    │   ├── browser_crawler.py
+    │   └── router.py
+    └── browser_agent/
+        ├── __init__.py        ← this file
+        └── agent.py           ← this file
